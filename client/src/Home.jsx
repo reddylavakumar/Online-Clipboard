@@ -14,7 +14,7 @@ function Home() {
     setIsVisible(true);
 
     try {
-      const generatedNumber = await generateUniqueNumber(); // Generate unique ID
+      const generatedNumber = await generateUniqueNumber(); // Generates unique ID
       setUniid(generatedNumber);
 
       const response = await axios.post("http://localhost:3001/register", {
@@ -31,7 +31,7 @@ function Home() {
     let generatedNumber;
     do {
       generatedNumber = Math.floor(1000 + Math.random() * 9000);
-    } while (await checkUniqueIdExists(generatedNumber)); // Check if ID exists
+    } while (await checkUniqueIdExists(generatedNumber)); // Checks if ID exists
     return generatedNumber;
   };
 
@@ -40,7 +40,7 @@ function Home() {
       const response = await axios.get(
         `http://localhost:3001/api/data/${generatedNumber}`
       );
-      return response.data !== null; // Return true if ID exists
+      return response.data !== null; // Return true if ID exists already
     } catch (error) {
       console.error("Error checking unique ID:", error);
       return false;
