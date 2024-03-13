@@ -6,7 +6,7 @@ const DataModel = require('./models/Data');
 const app = express();
 app.use(cors(
     {
-        origin: ["https://online-clipboard-smoky.vercel.app"],
+        origin: ["https://online-clipboard-frontend.vercel.app/"],
         methods: ["POST","GET"],
         credentials:true
     }
