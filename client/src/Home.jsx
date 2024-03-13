@@ -8,6 +8,7 @@ function Home() {
   const [data, setData] = useState("");
   const [uniid, setUniid] = useState("");
   const [isVisible, setIsVisible] = useState(false);
+  axios.default.withCredentials = true;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +18,7 @@ function Home() {
       const generatedNumber = await generateUniqueNumber(); // Generates unique ID
       setUniid(generatedNumber);
 
-      const response = await axios.post("http://localhost:3001/register", {
+      const response = await axios.post("https://online-clipboard-api.vercel.app//", {
         data,
         uniid: generatedNumber,
       });
