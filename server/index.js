@@ -4,8 +4,15 @@ const cors = require("cors");
 const DataModel = require('./models/Data');
 
 const app = express();
+app.use(cors(
+    {
+        origin: ["https://online-clipboard-smoky.vercel.app"],
+        methods: ["POST","GET"],
+        credentials:true
+    }
+    ));
+                 
 app.use(express.json());
-app.use(cors());
 
 mongoose.connect("mongodb+srv://lavakumar9877:Lav%409877@cluster0.qbrgzki.mongodb.net/data?retryWrites=true&w=majority&appName=Cluster0", { useNewUrlParser: true, useUnifiedTopology: true });
 
