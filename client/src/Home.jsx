@@ -18,7 +18,7 @@ function Home() {
       const generatedNumber = await generateUniqueNumber(); // Generates unique ID
       setUniid(generatedNumber);
 
-      const response = await axios.post("https://online-clipboard-api.vercel.app//", {
+      const response = await axios.post("https://online-clipboard-api.vercel.app/", {
         data,
         uniid: generatedNumber,
       });
