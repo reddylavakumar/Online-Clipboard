@@ -16,6 +16,10 @@ app.use(express.json());
 
 mongoose.connect("mongodb+srv://lavakumar9877:Lav%409877@cluster0.qbrgzki.mongodb.net/data?retryWrites=true&w=majority&appName=Cluster0", { useNewUrlParser: true, useUnifiedTopology: true });
 
+app.get("/", (req, res) => {
+  res.send("<h1>Server online </h1>");
+});
+
 
 app.post('/register', (req, res) => {
     DataModel.create(req.body)
