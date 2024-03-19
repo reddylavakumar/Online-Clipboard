@@ -12,7 +12,7 @@ const Retrieve = () => {
     e.preventDefault();
     try {
       const response = await axios.get(
-        `http://localhost:3001/api/data/${uniqueId}`
+        `https://online-clipboard-api.vercel.app/api/data/${uniqueId}`
       );
       setData(response.data);
     } catch (error) {
