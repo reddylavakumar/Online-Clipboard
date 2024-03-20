@@ -9,7 +9,7 @@ app.use(cors(
         origin: ["https://online-clipboard-frontend.vercel.app/"],
         methods: ["POST","GET"],
         credentials:true
-    }
+    }   
     ));
                  
 app.use(express.json());
