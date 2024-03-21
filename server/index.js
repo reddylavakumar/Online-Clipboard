@@ -7,7 +7,7 @@ const app = express();
 
 // Configure CORS
 app.use(cors({
-    origin: "https://online-clipboard-nine.vercel.app",
+    origin: "*",
     methods: ["POST", "GET"],
     credentials: true
 }));
