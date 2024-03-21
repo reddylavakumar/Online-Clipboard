@@ -39,7 +39,7 @@ function Home() {
   const checkUniqueIdExists = async (generatedNumber) => {
     try {
       const response = await axios.get(
-        `https://online-clipboard-api.vercel.app/api/data/${generatedNumber}`
+        `https://online-clipboard-nine.vercel.app/api/data/${generatedNumber}`
       );
       return response.data !== null; // Return true if ID exists already
     } catch (error) {
