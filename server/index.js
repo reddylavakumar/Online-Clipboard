@@ -4,13 +4,17 @@ const cors = require("cors");
 const DataModel = require('./models/Data');
 
 const app = express();
-app.use(cors(
-    {
-        origin: ["https://online-clipboard-nine.vercel.app"],
-        methods: ["POST","GET"],
-        credentials:true
-    }   
-    ));
+// app.use(cors(
+//     {
+//         origin: ["https://online-clipboard-nine.vercel.app"],
+//         methods: ["POST","GET"],
+//         credentials:true
+//     }   
+//     ));
+app.use(cors({
+    origin: "*",
+    methods: ["POST", "GET"]
+}));
                  
 app.use(express.json());
 
