@@ -18,7 +18,7 @@ function Home() {
       const generatedNumber = await generateUniqueNumber(); // Generates unique ID
       setUniid(generatedNumber);
 
-      const response = await axios.post("https:/online-clipboard-nine.vercel.app/", {
+      const response = await axios.post("https://online-clipboard-nine.vercel.app/", {
         data,
         uniid: generatedNumber,
       });
@@ -39,7 +39,7 @@ function Home() {
   const checkUniqueIdExists = async (generatedNumber) => {
     try {
       const response = await axios.get(
-        `https://online-clipboard-nine.vercel.app/api/data/${generatedNumber}`
+        `https://online-clipboard-nine.vercel.app//api/data/${generatedNumber}`
       );
       return response.data !== null; // Return true if ID exists already
     } catch (error) {
