@@ -9,7 +9,7 @@ const app = express();
 app.use(cors({
     origin: "*",
     methods: ["POST", "GET"],
-    credentials: true
+    credentials: false
 }));
 
 // Body parser middleware
